@@ -1,0 +1,128 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package homework.pkg4;
+
+/**
+ *
+ * @author Alejandro
+ */
+public class Player {
+    //Not sure if an array or tokens for players will be used.
+    //five players
+    
+    //Colors for trains blue, red, green, yellow, and black
+    public static final String BLUE = "Blue";
+    public static final String RED = "Red";
+    public static final String GREEN = "Green";
+    public static final String YELLOW = "Yellow";
+    public static final String BLACK = "Black";
+    
+    
+    //setting up Player attributes
+    private String playerMarker;
+    private int playerCount = 0;
+    
+    //declaring array for keeping track of players
+    //leaving board to make player array to keep track of individual players
+    //int[] playerArray = new int[5];
+    
+    //tokens for player's hand
+    private int blueTrains, redTrains, greenTrains, yellowTrains, blackTrains;
+    
+    //intiailize player
+    public Player(String color){
+        playerMarker = color;
+        blueTrians = 0;
+        redTrains = 0;
+        greenTrains = 0;
+        yellowTrains = 0;
+        blackTrains = 0;
+    }
+    
+    //set player color and hand
+    public void setPlayer(String color, int blue, int red, int green, int yellow, int black){
+        this.playerMarker = color;
+        this.blueTrains = blue;
+        this.redTrains = red;
+        this.blackTrains = black;
+        this.greenTrains = green;
+        this.yellowTrains = yellow;
+        playerCount++;    
+        }
+    }
+    
+    //adding to deck
+    public void addPlayerHand(String color){
+    
+    if(color == "blue"){
+        blueTrains++;
+        }
+    else if(color == "red"){
+        redTrains++;
+        }
+    else if(color == "green"){
+        greenTrains++;
+        }
+    else if(color == "yellow"){
+        yellowTrians++
+        }
+    else if(color == "black"){   
+        blackTrians++;
+        }
+        
+    }
+
+    //subtracking trains
+
+    public void removeFromHand(String color, int num){
+    int temp;
+      if(color == "blue"){
+        temp = blueTrians;
+        blueTrains = temp - num;
+        }
+    else if(color == "red"){
+        temp = redTrains;
+        redTrains = temp - num;
+        }
+    else if(color == "green"){
+        temp = greenTrains;
+        greenTrains = temp - num;
+        }
+    else if(color == "yellow"){
+        temp = yellowTrains;
+        yellowTrains = temp - num;
+        }
+    else if(color == "black"){   
+        temp = blackTrians;
+        blackTrians = temp - num;
+        }
+        
+    }
+
+    //getters
+    
+    public String getPlayerMarker(){
+        return this.playerMarker;
+    }
+
+    public int getPlayerblue(){
+        return this.blueTrains;
+    }
+    public int getPlayerRed(){
+        return this.redTrains;
+    }
+    public int getPlayerGreen(){
+        return this.greenTrains;
+    }
+    public int getPlayerYellow(){
+        return this.yellowTrains;
+    }
+    public int getPlayerBlack(){
+        return this.blackTrains
+    }
+
+    
+}
