@@ -1,0 +1,53 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import homework.pkg4.Player;
+import static java.awt.Color.blue;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author Alejandro
+ */
+public class PlayerTest {
+    
+    public PlayerTest() {
+    }
+    Player testPlayer = new Player(blue);
+
+    // TODO add test methods here.
+    // The methods must be annotated with annotation @Test. For example:
+    //
+    // @Test
+    // public void hello() {}
+    @Test
+    public void testGetPlayerBlack(){
+        assertEquals(0, testPlayer.getPlayerBlack());
+    }
+    @Test
+    public void testAddToDeck(){
+        assertEquals(1, testPlayer.addPlayerHand(black));
+    }
+    @Test
+    public void testPlayerMarker(){
+        assertEquals("blue", testPlayer.getPlayerMarker());
+    }
+    @Before
+    //setting new test player with deck
+    Player testPlayer2;
+    testPlayer2.setPlayer(blue, 3, 4, 5, 6, 8);
+    
+    @Test
+    pubic void testRemoveDeck(){
+        assertEquals(1, testPlayer2.removeFromHand(black, 7));
+    }
+    
+}
