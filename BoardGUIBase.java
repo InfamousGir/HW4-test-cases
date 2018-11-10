@@ -68,6 +68,10 @@ public class BoardGUIBase extends Application {
     protected final Label label;
     protected final ImageView imageView;
     protected final ImageView imageView1;
+    protected final ImageView imageView2;
+    protected final ImageView boardTrainCard1;
+    protected final ImageView boardTrainCard2;
+    protected final ImageView boardTrainCard3;
     protected final Button button;
     protected final Button button0;
     protected final Button button1;
@@ -77,6 +81,11 @@ public class BoardGUIBase extends Application {
     protected final Button boardCard1;
     protected final Button boardCard2;
     protected final Button boardCard3;
+    protected final Button playerHand1;
+    protected final Button playerHand2;
+    protected final Button playerHand3;
+    protected final Button playerHand4;
+    protected final ArrayList<TrainCard> tr
     
     protected final ArrayList<TrainCard> hand;
     protected VBox v;
@@ -114,6 +123,11 @@ public class BoardGUIBase extends Application {
         label = new Label();
         imageView = new ImageView();
         imageView1 = new ImageView();
+        imageView2 = new ImageView();
+        pH1 = new ImageView();
+        pH2 = new ImageView();
+        pH3 = new ImageView();
+        pH4 = new ImageView();
         button = new Button();
         button0 = new Button();
         button1 = new Button();
@@ -123,6 +137,10 @@ public class BoardGUIBase extends Application {
         boardCard1 = new Button();
         boardCard2 = new Button();
         boardCard3 = new Button();
+        playerHand1 = new Button();
+        playerHand2 = new Button();
+        playerHand3 = new Button();
+        playerHand4 = new Button();
         hand = new ArrayList<>();
         v = new VBox();
 
@@ -290,6 +308,66 @@ public class BoardGUIBase extends Application {
 
             }
         });
+        
+        // Sample Player Hand 1
+        pH1.setFitHeight(80.0);
+        pH1.setFitWidth(134.0);
+        pH1.setImage(new Image(getClass().getResource("Black.jpg").toExternalForm()));
+         
+        Button playerHand1 = new Button("Sample Hand");
+        playerHand1.setLayoutX(30);
+        playerHand1.setLayoutY(630);
+        playerHand1.setGraphic(pH1);
+        playerHand1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+
+            }
+        });
+        
+        // Sample Player Hand 2
+        pH2.setFitHeight(80.0);
+        pH2.setFitWidth(134.0);
+        pH2.setImage(new Image(getClass().getResource("Red.jpg").toExternalForm()));
+         
+        Button playerHand2 = new Button("Sample Hand");
+        playerHand2.setLayoutX(270);
+        playerHand2.setLayoutY(630);
+        playerHand2.setGraphic(pH2);
+        playerHand2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+
+            }
+        });
+        
+        // Sample Player Hand 3
+        pH3.setFitHeight(80.0);
+        pH3.setFitWidth(134.0);
+        pH3.setImage(new Image(getClass().getResource("Locomotive.jpg").toExternalForm()));
+         
+        Button playerHand3 = new Button("Sample Hand");
+        playerHand3.setLayoutX(510);
+        playerHand3.setLayoutY(630);
+        playerHand3.setGraphic(pH3);
+        playerHand1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+
+            }
+        });
+
+        // Sample Player Hand 3
+        pH4.setFitHeight(80.0);
+        pH4.setFitWidth(134.0);
+        pH4.setImage(new Image(getClass().getResource("Yellow.jpg").toExternalForm()));
+         
+        Button playerHand4 = new Button("Sample Hand");
+        playerHand4.setLayoutX(30);
+        playerHand4.setLayoutY(740);
+        playerHand4.setGraphic(pH4);
+        playerHand1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+
+            }
+        });
 
 
         button.setId("SanFrancisco");
@@ -433,6 +511,10 @@ public class BoardGUIBase extends Application {
         anchorPane.getChildren().add(label);
         anchorPane.getChildren().add(imageView);
         anchorPane.getChildren().add(imageView1);
+        anchorPane.getChildren().add(pH1);
+        anchorPane.getChildren().add(pH2);
+        anchorPane.getChildren().add(pH3);
+        anchorPane.getChildren().add(pH4);
         anchorPane.getChildren().add(button);
         anchorPane.getChildren().add(button0);
         anchorPane.getChildren().add(button1);
@@ -442,7 +524,10 @@ public class BoardGUIBase extends Application {
         anchorPane.getChildren().add(boardCard1);
         anchorPane.getChildren().add(boardCard2);
         anchorPane.getChildren().add(boardCard3);
-        v.getChildren().add(anchorPane);
+        anchorPane.getChildren().add(playerHand1);
+        anchorPane.getChildren().add(playerHand2);
+        anchorPane.getChildren().add(playerHand3);
+        anchorPane.getChildren().add(playerHand4);
         return v;
     }
 
