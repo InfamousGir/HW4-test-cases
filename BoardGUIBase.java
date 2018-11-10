@@ -243,50 +243,53 @@ public class BoardGUIBase extends Application {
             }
         });
         
-                // Board Train Card 1
+        
+          // Board Train Card 1
         boardTrainCard1.setFitHeight(80.0);
         boardTrainCard1.setFitWidth(134.0);
-        boardTrainCard1.setImage(new Image(getClass().getResource("Back2.jpg").toExternalForm()));
-         
-        Button boardCard1 = new Button("Board Card");
+        boardTrainCard1.setImage(new Image(getClass().getResource("Green.jpg").toExternalForm()));
+        
+        // Board Train Card 1
+        Button boardCard1 = new Button("Sample Board Card");
         boardCard1.setLayoutX(935);
         boardCard1.setLayoutY(200);
         boardCard1.setGraphic(boardTrainCard1);
         boardCard1.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-
+            public void handle(ActionEvent e) {
+                //drawTrainCard(tc);
             }
         });
+
         
         // Board Train Card 2
         boardTrainCard2.setFitHeight(80.0);
         boardTrainCard2.setFitWidth(134.0);
-        boardTrainCard2.setImage(new Image(getClass().getResource("Back2.jpg").toExternalForm()));
+        boardTrainCard2.setImage(new Image(getClass().getResource("Locomotive.jpg").toExternalForm()));
          
-        Button boardCard2 = new Button("Board Card");
+        Button boardCard2 = new Button("Sample Board Card");
         boardCard2.setLayoutX(935);
         boardCard2.setLayoutY(330);
         boardCard2.setGraphic(boardTrainCard2);
         boardCard2.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-                //hand.drawTrainCard();
+
             }
         });
 
         // Board Train Card 3
         boardTrainCard3.setFitHeight(80.0);
         boardTrainCard3.setFitWidth(134.0);
-        boardTrainCard3.setImage(new Image(getClass().getResource("Back2.jpg").toExternalForm()));
+        boardTrainCard3.setImage(new Image(getClass().getResource("Black.jpg").toExternalForm()));
          
-        Button boardCard3 = new Button("Board Card");
+        Button boardCard3 = new Button("Sample Board Card");
         boardCard3.setLayoutX(935);
         boardCard3.setLayoutY(460);
         boardCard3.setGraphic(boardTrainCard3);
         boardCard3.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-  
+
             }
-        }); 
+        });
 
 
         button.setId("SanFrancisco");
