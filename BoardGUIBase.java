@@ -240,7 +240,6 @@ public class BoardGUIBase extends Application {
         button3.setGraphic(imageView1);
         button3.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-                //hand.drawTrainCard(deck);
             }
         });
         
@@ -255,7 +254,7 @@ public class BoardGUIBase extends Application {
         boardCard1.setGraphic(boardTrainCard1);
         boardCard1.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-                //hand.drawTrainCard();
+
             }
         });
         
@@ -285,7 +284,7 @@ public class BoardGUIBase extends Application {
         boardCard3.setGraphic(boardTrainCard3);
         boardCard3.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-                //hand.drawTrainCard();
+  
             }
         }); 
 
