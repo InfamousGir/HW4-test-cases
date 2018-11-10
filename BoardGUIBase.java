@@ -72,6 +72,10 @@ public class BoardGUIBase extends Application {
     protected final ImageView boardTrainCard1;
     protected final ImageView boardTrainCard2;
     protected final ImageView boardTrainCard3;
+    protected final ImageView pH1;
+    protected final ImageView pH2;
+    protected final ImageView pH3;
+    protected final ImageView pH4;
     protected final Button button;
     protected final Button button0;
     protected final Button button1;
@@ -85,7 +89,7 @@ public class BoardGUIBase extends Application {
     protected final Button playerHand2;
     protected final Button playerHand3;
     protected final Button playerHand4;
-    protected final ArrayList<TrainCard> tr
+
     
     protected final ArrayList<TrainCard> hand;
     protected VBox v;
@@ -141,7 +145,6 @@ public class BoardGUIBase extends Application {
         playerHand2 = new Button();
         playerHand3 = new Button();
         playerHand4 = new Button();
-        hand = new ArrayList<>();
         v = new VBox();
 
 
@@ -251,23 +254,45 @@ public class BoardGUIBase extends Application {
         imageView1.setLayoutY(71);
         imageView1.setImage(new Image(getClass().getResource("Back2.jpg").toExternalForm()));
         
-        // Draw from TrainCards Deck to 
+         // Button to draw Train Cards
+        imageView1.setFitHeight(80.0);
+        imageView1.setFitWidth(134.0);
+        imageView1.setImage(new Image(getClass().getResource("Back2.jpg").toExternalForm()));
+        
+ 
         Button button3 = new Button("Train Cards Draw");
         button3.setLayoutX(935);
         button3.setLayoutY(71);
         button3.setGraphic(imageView1);
         button3.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
+                //hand.drawTrainCard();
             }
         });
         
         
-          // Board Train Card 1
+        // Button for Destination Cards
+        imageView2.setFitHeight(80.0);
+        imageView2.setFitWidth(134.0);
+        imageView2.setImage(new Image(getClass().getResource("Back2.jpg").toExternalForm()));
+        
+        Button button4 = new Button("Destination Cards Draw");
+        button4.setLayoutX(915);
+        button4.setLayoutY(750);
+        button4.setGraphic(imageView2);
+        button4.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+                //hand.drawTrainCard(deck);
+            }
+        });
+        
+       
+        
+         // Board Train Card 1
         boardTrainCard1.setFitHeight(80.0);
         boardTrainCard1.setFitWidth(134.0);
         boardTrainCard1.setImage(new Image(getClass().getResource("Green.jpg").toExternalForm()));
-        
-        // Board Train Card 1
+         
         Button boardCard1 = new Button("Sample Board Card");
         boardCard1.setLayoutX(935);
         boardCard1.setLayoutY(200);
@@ -279,6 +304,8 @@ public class BoardGUIBase extends Application {
         });
 
         
+
+
         // Board Train Card 2
         boardTrainCard2.setFitHeight(80.0);
         boardTrainCard2.setFitWidth(134.0);
@@ -353,11 +380,11 @@ public class BoardGUIBase extends Application {
 
             }
         });
-
-        // Sample Player Hand 3
+        
+        // Sample Player Hand 4
         pH4.setFitHeight(80.0);
         pH4.setFitWidth(134.0);
-        pH4.setImage(new Image(getClass().getResource("Yellow.jpg").toExternalForm()));
+        pH4.setImage(new Image(getClass().getResource("Locomotive.jpg").toExternalForm()));
          
         Button playerHand4 = new Button("Sample Hand");
         playerHand4.setLayoutX(30);
@@ -511,6 +538,10 @@ public class BoardGUIBase extends Application {
         anchorPane.getChildren().add(label);
         anchorPane.getChildren().add(imageView);
         anchorPane.getChildren().add(imageView1);
+         anchorPane.getChildren().add(imageView2);
+        anchorPane.getChildren().add(boardTrainCard1);
+        anchorPane.getChildren().add(boardTrainCard2);
+        anchorPane.getChildren().add(boardTrainCard3);
         anchorPane.getChildren().add(pH1);
         anchorPane.getChildren().add(pH2);
         anchorPane.getChildren().add(pH3);
@@ -538,10 +569,10 @@ public class BoardGUIBase extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("My First JavaFX App");
+        primaryStage.setTitle("Ticket to Ride");
         GridPane p = new GridPane();
         p.getChildren().add(setScene());
-        Scene scene = new Scene(p, 1200, 800);
+        Scene scene = new Scene(p, 1200, 850);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
