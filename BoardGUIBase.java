@@ -74,6 +74,10 @@ public class BoardGUIBase extends Application {
     protected final Button button2;
     protected final Button button3;
     protected final Button button4;
+    protected final Button boardCard1;
+    protected final Button boardCard2;
+    protected final Button boardCard3;
+    
     protected final ArrayList<TrainCard> hand;
     protected VBox v;
 
@@ -116,6 +120,9 @@ public class BoardGUIBase extends Application {
         button2 = new Button();
         button3 = new Button();
         button4 = new Button();
+        boardCard1 = new Button();
+        boardCard2 = new Button();
+        boardCard3 = new Button();
         hand = new ArrayList<>();
         v = new VBox();
 
@@ -236,6 +243,52 @@ public class BoardGUIBase extends Application {
                 //hand.drawTrainCard(deck);
             }
         });
+        
+                // Board Train Card 1
+        boardTrainCard1.setFitHeight(80.0);
+        boardTrainCard1.setFitWidth(134.0);
+        boardTrainCard1.setImage(new Image(getClass().getResource("Back2.jpg").toExternalForm()));
+         
+        Button boardCard1 = new Button("Board Card");
+        boardCard1.setLayoutX(935);
+        boardCard1.setLayoutY(200);
+        boardCard1.setGraphic(boardTrainCard1);
+        boardCard1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+                //hand.drawTrainCard();
+            }
+        });
+        
+        // Board Train Card 2
+        boardTrainCard2.setFitHeight(80.0);
+        boardTrainCard2.setFitWidth(134.0);
+        boardTrainCard2.setImage(new Image(getClass().getResource("Back2.jpg").toExternalForm()));
+         
+        Button boardCard2 = new Button("Board Card");
+        boardCard2.setLayoutX(935);
+        boardCard2.setLayoutY(330);
+        boardCard2.setGraphic(boardTrainCard2);
+        boardCard2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+                //hand.drawTrainCard();
+            }
+        });
+
+        // Board Train Card 3
+        boardTrainCard3.setFitHeight(80.0);
+        boardTrainCard3.setFitWidth(134.0);
+        boardTrainCard3.setImage(new Image(getClass().getResource("Back2.jpg").toExternalForm()));
+         
+        Button boardCard3 = new Button("Board Card");
+        boardCard3.setLayoutX(935);
+        boardCard3.setLayoutY(460);
+        boardCard3.setGraphic(boardTrainCard3);
+        boardCard3.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+                //hand.drawTrainCard();
+            }
+        }); 
+
 
         button.setId("SanFrancisco");
         button.setLayoutX(37.0);
@@ -384,6 +437,9 @@ public class BoardGUIBase extends Application {
         anchorPane.getChildren().add(button2);
         anchorPane.getChildren().add(button3);
         anchorPane.getChildren().add(button4);
+        anchorPane.getChildren().add(boardCard1);
+        anchorPane.getChildren().add(boardCard2);
+        anchorPane.getChildren().add(boardCard3);
         v.getChildren().add(anchorPane);
         return v;
     }
