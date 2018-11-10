@@ -67,10 +67,14 @@ public class BoardGUIBase extends Application {
     protected final AnchorPane anchorPane;
     protected final Label label;
     protected final ImageView imageView;
+    protected final ImageView imageView1;
     protected final Button button;
     protected final Button button0;
     protected final Button button1;
     protected final Button button2;
+    protected final Button button3;
+    protected final Button button4;
+    protected final ArrayList<TrainCard> hand;
     protected VBox v;
 
     public BoardGUIBase() {
@@ -105,10 +109,14 @@ public class BoardGUIBase extends Application {
         anchorPane = new AnchorPane();
         label = new Label();
         imageView = new ImageView();
+        imageView1 = new ImageView();
         button = new Button();
         button0 = new Button();
         button1 = new Button();
         button2 = new Button();
+        button3 = new Button();
+        button4 = new Button();
+        hand = new ArrayList<>();
         v = new VBox();
 
 
@@ -211,6 +219,23 @@ public class BoardGUIBase extends Application {
         imageView.setFitWidth(849.0);
         imageView.setLayoutX(26.0);
         imageView.setImage(new Image(getClass().getResource("ticket_to_ride_map.jpg").toExternalForm()));
+        
+        imageView1.setFitHeight(80.0);
+        imageView1.setFitWidth(134.0);
+        imageView1.setLayoutX(935);
+        imageView1.setLayoutY(71);
+        imageView1.setImage(new Image(getClass().getResource("Back2.jpg").toExternalForm()));
+        
+        // Draw from TrainCards Deck to 
+        Button button3 = new Button("Train Cards Draw");
+        button3.setLayoutX(935);
+        button3.setLayoutY(71);
+        button3.setGraphic(imageView1);
+        button3.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+                //hand.drawTrainCard(deck);
+            }
+        });
 
         button.setId("SanFrancisco");
         button.setLayoutX(37.0);
@@ -352,10 +377,13 @@ public class BoardGUIBase extends Application {
         menuBar.getMenus().add(menu2);
         anchorPane.getChildren().add(label);
         anchorPane.getChildren().add(imageView);
+        anchorPane.getChildren().add(imageView1);
         anchorPane.getChildren().add(button);
         anchorPane.getChildren().add(button0);
         anchorPane.getChildren().add(button1);
         anchorPane.getChildren().add(button2);
+        anchorPane.getChildren().add(button3);
+        anchorPane.getChildren().add(button4);
         v.getChildren().add(anchorPane);
         return v;
     }
