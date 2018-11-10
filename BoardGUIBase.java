@@ -89,9 +89,6 @@ public class BoardGUIBase extends Application {
     protected final Button playerHand2;
     protected final Button playerHand3;
     protected final Button playerHand4;
-
-    
-    protected final ArrayList<TrainCard> hand;
     protected VBox v;
 
     public BoardGUIBase() {
@@ -132,6 +129,9 @@ public class BoardGUIBase extends Application {
         pH2 = new ImageView();
         pH3 = new ImageView();
         pH4 = new ImageView();
+        boardTrainCard1 = new ImageView();
+        boardTrainCard2 = new ImageView();        
+        boardTrainCard3 = new ImageView();
         button = new Button();
         button0 = new Button();
         button1 = new Button();
